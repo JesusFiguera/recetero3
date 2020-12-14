@@ -1,0 +1,31 @@
+<!doctype html>
+<head>
+    <head>
+        <title>Recetas</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename="inicio2_2.css") }}">
+    </head>
+    <body>
+        <h1 id="header"><a href=" {{url_for('receta.inicio')}} ">La cocina de mami</a></h1>
+        <ul id="navegador">
+            <li><a href=" {{url_for('receta.inicio')}} ">Inicio</a></li>
+            <li><a href=" {{url_for('receta.inicio')}} ">Categorias</a></li>
+        </ul>
+        <div id="contenedor">
+            <h2 id="header2"> <a href="#">{{receta['titulo']}}</a> </h2>
+            <h4> <a href="#">{{receta['categoria']}}</a> </h4>
+            <img src=" {{receta['url']}} ">
+            <div id="contenido">
+                <p> {{receta['descripcion']}} </p>
+                <h3><a href="#"> Ingredientes </a></h3>
+                <textarea rows=" {{rows}} ">{{receta['ingredientes']}} </textarea>
+                <h3><a href="#"> Preparacion </a></h3>
+                <p> {{receta['preparacion']}} </p>
+            </div>
+            <footer>
+                <ul id="informacion">
+                    <li>2020</li>
+                    <li>By Jesus Figuera</li>
+                </ul>
+            </footer>
+    </body>
+</head>

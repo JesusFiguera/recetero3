@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Categorias</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename="categorias.css") }}">
+    </head>
+    <body>
+        <h1 id="header"><a href=" {{url_for('receta.inicio')}} ">La cocina de mami</a></h1>
+        <ul id="navegador">
+            <li><a href=" {{url_for('receta.inicio')}} ">Inicio</a></li>
+        </ul>
+        <h1 id="head_categorias">Categorias</h1>
+        <ul id="categorias">
+            <li><a href=" {{ url_for('receta.mostrar_categoria', categoria='postres') }} ">Postres</a></li>
+        </ul>
+        <footer>
+            <ul id="informacion">
+                <li>2020</li>
+                <li>By Jesus Figuera</li>
+            </ul>
+        </footer>
+    </body>
+</html>
